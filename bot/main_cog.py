@@ -1,7 +1,7 @@
 import discord
 import json
 from discord.ext import commands
-from embedlist import *
+from bot.embedlist import *
 
 class MainCog(commands.Cog):
     def __init__(self, bot):

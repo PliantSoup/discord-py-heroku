@@ -1,9 +1,9 @@
 import discord
 import json
 from discord.ext import commands
-from config import settings
-import musictest
-from main_cog import MainCog
+from bot.config import settings
+from bot import musictest
+from bot.main_cog import MainCog
 
 client = commands.Bot(command_prefix=settings['prefix'],
                       intents=discord.Intents.all())
