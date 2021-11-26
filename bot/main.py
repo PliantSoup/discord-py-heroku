@@ -1,3 +1,5 @@
+import os
+
 import discord
 import json
 from discord.ext import commands
@@ -42,4 +44,4 @@ async def on_raw_reaction_remove(payload):
                 await client.get_guild(payload.guild_id).get_member(payload.user_id).remove_roles(role)
 
 if __name__ == "__main__":
-    client.run(settings['token'])
+    client.run(os.getenv("DISCORD_TOKEN"))
