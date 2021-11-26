@@ -1,5 +1,7 @@
+import os
+
 settings = {
-    'token': 'ODkzMjI1OTc4MjI5MzIxNzk4.YVYXhA.8PMjll9CoKVKawU7oEX2sHOwrwQ',
+    'token': os.getenv("DISCORD_TOKEN"),
     'bot': 'Evergreen Trees Bot',
     'prefix': '!!'
 }
