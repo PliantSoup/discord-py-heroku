@@ -41,5 +41,5 @@ async def on_raw_reaction_remove(payload):
 
                 await client.get_guild(payload.guild_id).get_member(payload.user_id).remove_roles(role)
 
-
-client.run(settings['token'])
+if __name__ == "__main__":
+    client.run(settings['token'])
