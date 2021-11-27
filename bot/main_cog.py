@@ -81,7 +81,7 @@ class MainCog(commands.Cog):
         msg = await ctx.channel.send(embed=embed)
         await msg.add_reaction(emoji)
 
-        with open('reactrole') as json_file:
+        with open('../reactrole') as json_file:
             data = json.load(json_file)
 
             new_reactrole = {
@@ -93,7 +93,7 @@ class MainCog(commands.Cog):
 
             data.append(new_reactrole)
 
-        with open('reactrole', 'w') as j:
+        with open('../reactrole', 'w') as j:
             json.dump(data, j, indent=4)
 
     @commands.command(description="Обновляет Verify сообщение")
