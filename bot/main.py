@@ -35,7 +35,7 @@ async def on_raw_reaction_add(payload):
 
 @client.event
 async def on_raw_reaction_remove(payload):
-    with open('reactrole') as reactfile:
+    with open('bot/' + 'reactrole') as reactfile:
         data = json.load(reactfile)
         for x in data:
             if x['emoji'] == payload.emoji.name and x['message_id'] == payload.message_id:
