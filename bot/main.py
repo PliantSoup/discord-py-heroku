@@ -24,7 +24,7 @@ async def on_raw_reaction_add(payload):
     if payload.member.bot:
         pass
     else:
-        with open('../reactrole') as reactfile:
+        with open('reactrole') as reactfile:
             data = json.load(reactfile)
             for x in data:
                 if x['emoji'] == payload.emoji.name and x['message_id'] == payload.message_id:
